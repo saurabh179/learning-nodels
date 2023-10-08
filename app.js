@@ -13,7 +13,7 @@ const shopRoutes = require('./routes/shop.js');
 const app = express();
 
 //setting global values for app like global config
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 //middleware parsing req

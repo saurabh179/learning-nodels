@@ -12,8 +12,13 @@ router.get('/add-product', (req, res, next) => {
     // rendering static file in response
     // res.sendFile(path.join(root_dir, 'views', 'add-product.html'));
 
-    //rendering pug file
-    res.render('add-product', {pageTitle: 'Add Product', path: '/admin/product'});
+    res.render('add-product', {
+        pageTitle: 'Add Product',
+        path: '/admin/product',
+        formsCSS: true,
+        productCSS: true,
+        activeAddProduct: true
+      });
 });
 
 router.post('/product', (req, res, next) => {

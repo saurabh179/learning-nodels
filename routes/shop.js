@@ -12,9 +12,16 @@ router.get('/', (req, res, next) => {
     // console.log(adminData.products);
     // res.sendFile(path.join(root_dir, 'views', 'shop.html'));
 
-    //rendering pug dynamic html file
+    //rendering pug dynamic html file 
     const products = adminData.products;
-    res.render('shop', {prods: products, pageTitle: "Shop", path: '/'});
+    res.render('shop', {
+        prods: products,
+        pageTitle: 'Shop',
+        path: '/',
+        hasProducts: products.length > 0,
+        activeShop: true,
+        productCSS: true
+    });
 });
 
 module.exports = router;
